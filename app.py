@@ -32,7 +32,7 @@ def expressions():
   return render_template("expressions.html", **kwargs )
 
 @app.route("/data-structures/")
-def data_structures():
+def render_data_structures():
 
   movies = [
     "Leon the Professional",
@@ -55,3 +55,8 @@ def data_structures():
   }
 
   return render_template("data_structures.html", **kwargs)
+
+@app.route("/conditionals-basics/")
+def render_conditionals():
+  company = "Microsoft"
+  return render_template("conditional_basics.html", company=company)
