@@ -30,3 +30,28 @@ def expressions():
   }
 
   return render_template("expressions.html", **kwargs )
+
+@app.route("/data-structures/")
+def data_structures():
+
+  movies = [
+    "Leon the Professional",
+    "The Usual Suspects",
+    "A Beautiful Mind"
+  ]
+
+  car = {
+    "brand": "Tesla",
+    "model": "Roadster",
+    "year": "2020"
+  }
+
+  moons = GalileanMoons("Io", "Europa", "Ganymede", "Callisto")
+
+  kwargs = {
+    "movies": movies,
+    "car": car,
+    "moons": moons
+  }
+
+  return render_template("data_structures.html", **kwargs)
